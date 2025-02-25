@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signup</title>
+</head>
+<body>
+<h1>Sign Up</h1>
+<p>Please fill all required information to create an account</p>
+<form>
+<fieldset>
+<label for="fullname">Fullname</label><br>
+<input type="text" id="name" required><br>
+<label for="studentid">Student ID</label><br>
+<input type="text" id="studentid" required><br>
+<label for="email">Email</label><br>
+<input type="email" id="email" required><br>
+<label for="password">Password</label><br>
+<input type="password" id="password" required><br>
+<label>
+<input type="checkbox”name="remember" style="marginbottom:15px">Remember me
+</label>
+<br><input type="submit" value="Submit">
+<input type="button" value="Clear">
+</fieldset>
+</form>
+<style>
+input[type=text],input[type=password],input[type=email]{
+width: 50%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1; }
+fieldset{
+width:60%;}
+p{
+font-weight:bold;
+font-style:italic}
+</style>
+</body>
+</html>
