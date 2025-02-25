@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Invite confirmation</title>
+<style>
+img {
+ border-radius: 60%;
+ width:35%;
+ float:left;}
+
+ h2,p{
+ text-align:center;
+ }
+</style>
+</head>
+<body>
+<img src="mr_bumble.jpg">
+<h2>Thank you for your RSVP. Here is your confirmation Card</h2>
+<div>
+<p>Full Name: <span id="name"></span></p>
+<p>Phone: <span id="phone"></span></p>
+<p>Email: <span id="email"></span></p>
+<p>Number of Attendees: <span id="attendees"></span></p>
+<p>Arrival Time: <span id="time"></span></p>
+<p>Menu Preference: <span id="menu"></span></p>
+<p>Table Option: <span id="table"></span></p>
+</div>
+<script>
+document.getElementById("name").textContent= localStorage.getItem("a");
+document.getElementById("phone").innerHTML= localStorage.getItem("b");
+document.getElementById("email").textContent= localStorage.getItem("c");
+document.getElementById("attendees").textContent=
+localStorage.getItem("d");
+document.getElementById("time").textContent= localStorage.getItem("e");
+document.getElementById("menu").textContent= localStorage.getItem("f");
+document.getElementById("table").textContent= localStorage.getItem("g");
+</script>
+</body>
+</html>

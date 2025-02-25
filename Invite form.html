@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Birthday Invitation</title>
+<style>
+button{
+width:85%;
+color:white;
+background-color:hotpink;
+border: none;
+border-radius:5px;
+padding-top:5px;
+height:25px;
+margin:5px;
+}
+input{
+width: 85%;
+margin:5px;
+padding:5px;
+border-radius:5px;
+border: 1px solid grey;
+}
+select{
+width:70%;
+margin:5px;
+padding:5px;
+border-radius:5px;
+border: 1px solid grey;
+}
+label{
+margin:5px;
+padding:5px;
+}
+h1{
+text-align:center;
+font-family:arial
+}
+</style>
+</head>
+<body>
+<h1>Bumble's Family 25th Anniversary Invitation</h1>
+<form id="invite">
+<label for="name">Full Name:<label><br>
+<input type="text" id="name"><br>
+<label for="phone">Phone Number:<label><br>
+<input type="tel" id="phone"><br>
+<label for="email">Email Address:<label><br>
+<input type="email" id="email"><br>
+<label for="attendees">Number of Attendees:<label><br>
+<input type="text" id="attendees"><br>
+<label for="time">Arrival Time:</label><br>
+<input type="time" id="time"><br>
+<label for="menu">Menu Preference</label><br>
+<select id="menu">
+<option>Select an option</option>
+<option>Vegan</option>
+</select><br>
+<label for="table">Select Table Option</label><br>
+<select id="table">
+<option>Select an option</option>
+<option>Table 1</option>
+<option>Table 2</option>
+<option>Table 3</option>
+<option>Table 4</option>
+</select><br>
+<button onclick="confirm()">Submit</button>
+</form>
+<script>
+function confirm(){
+window.open("Details.html");
+localStorage.setItem("a",document.getElementById("name").value);
+localStorage.setItem("b",document.getElementById("phone").value);
+localStorage.setItem("c",document.getElementById("email").value);
+localStorage.setItem("d",document.getElementById("attendees").value);
+localStorage.setItem("e",document.getElementById("time").value);
+localStorage.setItem("f",document.getElementById("menu").value);
+localStorage.setItem("g",document.getElementById("table").value);
+}
+</script>
+</body>
+</html>
