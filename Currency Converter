@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Exchange Rate Calculator</title>
+<style>
+label{
+padding: 5px;}
+input[type="number"] {
+ width: 90%;
+ padding: 10px;
+ margin: 5px ;
+ border: 1px solid;}
+table{
+width:90%;
+margin:5px;
+padding: 10px;
+border-collapse: collapse;}
+th, td {
+ padding: 10px;
+ text-align: center;
+ border: 1px solid lightgrey;}
+th {
+ background-color: lightblue;}
+button{
+color:white;
+background-color:lightblue;
+width:150px;
+margin: 5px;
+border: none;
+height:25px}
+</style>
+</head>
+<body>
+ <h1>Exchange Rate Calculator</h1>
+<label for="amount">Please Enter The Amount you want to Exchange in
+ZAR:</label><br>
+ <input type="number" id="amount" placeholder="Enter amount in ZAR">
+
+ <table>
+ <thead>
+ <tr>
+ <th>Currency</th>
+<th>Today's Exchange Rate</th>
+<th>Amount You Will Receive in ZAR Currency</th>
+ </tr>
+ </thead>
+ <tbody id="mytable">
+
+ </tbody>
+ </table><br>
+<button onclick="convert()">Convert</button>
+<script>
+ var conversion = {
+ "USD": 18.24,
+"EUR": 19.89,
+"GBP": 23.60,
+"JPY": 0.12,
+"AUD": 12.22,
+"CAD": 13.31,
+"CHF": 20.56,
+"CNY": 2.51,
+"INR": 0.22,
+"BRL": 3.37};
+ function convert() {
+ var amount = document.getElementById("amount").value;
+ var mytable = document.getElementById("mytable");
+ if (isNaN(amount) || amount <= 0) {
+ alert("Please enter a valid amount in ZAR.");
+ return;}
+ for (var [currency, rate] of Object.entries(conversion)) {
+ var converted = (amount * rate).toFixed(2);
+ var row = `<tr>
+ <td>${currency}</td>
+ <td>${rate}</td>
+ <td>${converted}</td>
+ </tr>`;
+ mytable.innerHTML += row;}
+ }
+</script>
+</body>
+</html>
